@@ -1,0 +1,23 @@
+.card
+  background-color white
+  border-radius 0.5rem
+  box-shadow 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1)
+
+  & + &
+    margin-top 1rem
+
+  &.is-expandable .body
+      height 8em
+      overflow auto
+  &.is-expanded .body
+    height auto
+
+.title
+  padding 0.2rem 1rem 0.4rem
+  font-size 1.5rem
+  font-weight bold
+  color #262626
+  border-bottom solid 1px #cccccc
+
+.body
+  padding 1rem

@@ -1,0 +1,32 @@
+colored($color)
+  background-color $color
+  border-bottom solid 0.125rem darken($color, 50%)
+  if dark($color)
+    color #e6e6e6
+    &:hover, &:active
+      background-color lighten($color, 15%)
+  else
+    color #1a1a1a
+    &:hover, &:active
+      background-color darken($color, 10%)
+
+.toggle-group
+  .toggle:not(:first-child)
+    border-top-left-radius 0
+    border-bottom-left-radius 0
+
+  .toggle:not(:last-child)
+    border-top-right-radius 0
+    border-bottom-right-radius 0
+
+  user-select none
+
+.toggle
+  colored(#e6e6e6)
+  display inline-block
+  padding 0.25rem 0.5rem 0.35rem
+  border-radius 0.25rem
+  cursor pointer
+
+  &.is-toggled
+    colored(#1e0b40)

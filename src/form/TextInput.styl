@@ -1,0 +1,13 @@
+bordered($color)
+  outline none
+  border none
+  border-bottom solid 0.125rem $color
+
+.text-input
+  width 30rem
+  height 2rem
+  $color = #e6e6e6
+  bordered($color)
+
+  &:focus, &:active
+    bordered(darken($color, 50%))

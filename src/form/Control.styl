@@ -1,0 +1,18 @@
+@import "colors.styl"
+
+.control
+  & + &
+    margin-top 0.25rem
+
+  .messages
+    font-size 0.8rem
+
+  for $lbl, $value in $colors
+    $label = ""
+    $label = "is-" + $lbl if $lbl != default
+
+    &.{$label}
+      .messages li
+        color $value
+      .text-input
+        border-color $value
